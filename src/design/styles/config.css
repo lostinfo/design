@@ -460,33 +460,45 @@
   display: inline-block;
 }
 
+.zent-design-component-image-ad-editor__entry-close-btn circle {
+  fill: #c8c9cc;
+}
+
+.zent-design-component-image-ad-editor__entry-close-btn:hover circle {
+  fill: #969799;
+}
+
+.zent-design-component-image-ad-editor__entry-prepend-btn circle, .zent-design-component-image-ad-editor__entry-append-btn circle {
+  fill: #3773da;
+}
+
+.zent-design-component-image-ad-editor__entry-prepend-btn:hover circle, .zent-design-component-image-ad-editor__entry-append-btn:hover circle {
+  fill: #155bd4;
+}
+
 .zent-design-component-image-ad-editor__entry:not(:last-child) {
   margin-bottom: 15px;
 }
 
 .zent-design-component-image-ad-editor__entry-close-btn {
   position: absolute;
-  top: -6px;
-  right: -6px;
-  color: #999;
-  font-size: 18px;
+  top: -10px;
+  right: -10px;
 }
 
 .zent-design-component-image-ad-editor__entry-close-btn:hover {
-  color: #666;
+
 }
 
-.zent-design-component-image-ad-editor__entry-prepend-btn, .zent-design-component-image-ad-editor__entry-append-btn {
-  background: #59f;
-  border-radius: 50%;
-  color: #f8f8f8;
-  padding: 4px;
-  font-size: 10px;
+.zent-design-component-image-ad-editor__entry-close-btn, .zent-design-component-image-ad-editor__entry-prepend-btn, .zent-design-component-image-ad-editor__entry-append-btn {
   position: absolute;
+  z-index: 5;
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
 }
 
 .zent-design-component-image-ad-editor__entry-prepend-btn:hover, .zent-design-component-image-ad-editor__entry-append-btn:hover {
-  background: #38f;
 }
 
 .zent-design-component-image-ad-editor__entry-prepend-btn {

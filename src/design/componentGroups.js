@@ -12,6 +12,7 @@ const componentGroups = [
       ImageAd: {
         name: '图片广告',
         defaultProps: {
+          size: 1,
           images: []
         }
       }

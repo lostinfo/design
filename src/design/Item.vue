@@ -122,6 +122,7 @@ export default {
       this.$emit('selectedItem')
     },
     changeValue(key, value) {
+      console.log(key, value)
       this.value[key] = value
       // todo emit list
     },

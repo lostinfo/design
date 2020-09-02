@@ -12,11 +12,15 @@
             </div>
           </div>
         </div>
-        <Item :item="item" :selected="index == selectedIndex" v-for="(item, index) in list" :key="item.id"
-              @selectedItem="() => selectedItem(index)"
-              @removeItem="() => removeItem(index)"
-              @addComponent="(type, addType) => addComponent(index, type, addType)"
-        ></Item>
+        <draggable v-model="list">
+          <transition-group>
+            <Item :item="item" :selected="index == selectedIndex" v-for="(item, index) in list" :key="item.id"
+                  @selectedItem="() => selectedItem(index)"
+                  @removeItem="() => removeItem(index)"
+                  @addComponent="(type, addType) => addComponent(index, type, addType)"
+            ></Item>
+          </transition-group>
+        </draggable>
       </div>
       <div class="zent-design__add zent-design__add--grouped">
         <div class="zent-design-editor-add-component zent-design-editor-add-component--grouped">
@@ -39,6 +43,7 @@
 import Item from "@/design/Item";
 import {componentGroups, getDefaultPropsByType} from "@/design/componentGroups";
 import {v4 as uuidv4} from 'uuid';
+import draggable from 'vuedraggable';
 
 export default {
   name: 'Design',
@@ -46,31 +51,13 @@ export default {
   data() {
     return {
       componentGroups: componentGroups,
-      list: [
-        {
-          id: '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d',
-          type: 'WhiteSpace',
-          props: {
-            backgroundColor: '#ffffff',
-            height: 40
-          },
-        },
-        {
-          id: '3r6h3f9c-458d-26af-78da-2ady5ui9ab6d',
-          type: 'ImageAd',
-          props: {
-            images: [
-              "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3390283223,239469593&fm=26&gp=0.jpg",
-              "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598873910696&di=b39bb204d58e5c9d4cc3eb753a569abb&imgtype=0&src=http%3A%2F%2Fres.allmacwallpaper.com%2Fget%2FMacBook-Air-13-inch-wallpapers%2FCape-Point-1440x900%2F17745-4.jpg"
-            ]
-          },
-        },
-      ],
+      list: [],
       selectedIndex: 0,
     }
   },
   components: {
-    Item
+    Item,
+    draggable,
   },
   methods: {
     selectedItem(index) {
