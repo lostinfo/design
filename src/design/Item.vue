@@ -77,13 +77,16 @@
   </div>
 </template>
 <script>
-import ImageAdPreview from "@/design/components/image-ad/ImageAdPreview";
-import ImageAdEditor from "@/design/components/image-ad/ImageAdEditor";
+import ImageAdPreview from "@/design/components/image-ad/ImageAdPreview"
+import ImageAdEditor from "@/design/components/image-ad/ImageAdEditor"
 
-import WhiteSpacePreview from "@/design/components/whitespace/WhiteSpacePreview";
-import WhiteSpaceEditor from "@/design/components/whitespace/WhiteSpaceEditor";
+import WhiteSpacePreview from "@/design/components/whitespace/WhiteSpacePreview"
+import WhiteSpaceEditor from "@/design/components/whitespace/WhiteSpaceEditor"
 
-import {componentGroups} from "@/design/componentGroups";
+import RichtextEditor from "@/design/components/richtext/RichtextEditor"
+import RichtextPreview from "@/design/components/richtext/RichtextPreview"
+
+import {componentGroups} from "@/design/componentGroups"
 
 export default {
   name: "Item",
@@ -110,6 +113,8 @@ export default {
     ImageAdEditor,
     WhiteSpacePreview,
     WhiteSpaceEditor,
+    RichtextEditor,
+    RichtextPreview,
   },
   created() {
 

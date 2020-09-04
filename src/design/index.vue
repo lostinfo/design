@@ -40,10 +40,10 @@
 </template>
 
 <script>
-import Item from "@/design/Item";
-import {componentGroups, getDefaultPropsByType} from "@/design/componentGroups";
-import {v4 as uuidv4} from 'uuid';
-import draggable from 'vuedraggable';
+import Item from "@/design/Item"
+import {componentGroups, getDefaultPropsByType} from "@/design/componentGroups"
+import {v4 as uuidv4} from 'uuid'
+import draggable from 'vuedraggable'
 
 export default {
   name: 'Design',

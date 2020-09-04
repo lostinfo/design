@@ -6,14 +6,22 @@ const componentGroups = [
         name: '辅助空白',
         defaultProps: {
           backgroundColor: '#ffffff',
-          height: 40
+          height: 40,
         }
       },
       ImageAd: {
         name: '图片广告',
         defaultProps: {
           size: 1,
-          images: []
+          images: [],
+        }
+      },
+      Richtext: {
+        name: '富文本',
+        defaultProps: {
+          backgroundColor: '#ffffff',
+          fullscreen: true,
+          content: '',
         }
       }
     }
